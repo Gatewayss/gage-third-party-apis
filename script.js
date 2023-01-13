@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
   $(function app() {
 
@@ -5,13 +7,22 @@ $(document).ready(function () {
     $('.saveBtn').on('click', (event) => {
     // grabs the button clicked 
       let curButton = $(event.currentTarget);
-    //grabs the id of the button clicked 
+      // grabs the id of the button clicked 
       let curButtonId = $(curButton).attr('id')
-      localStorage.setItem("button Id", curButtonId)
+      // grabs the block container of the current button 
+      let curButtonContainer = `#${curButtonId}-container`
+      // grabs the textarea associated with the current container
+      let curTextarea = $(curButtonContainer).find('textarea')
+      // gets the value from that container
+      let valueOfTextarea = $(curTextarea).val()
+      console.log(valueOfTextarea);
+      // stringify the current container id 
+      //let stringCurContainer = JSON.stringify(curButtonContainer)
+      // saves to local storage
+      //localStorage.setItem("container", valueOfTextarea )
     })
-    // This code should
-    // use the id in the containing time-block as a key to save the user input in
-    //});
+
+
     // local storage. HINT: What does `this` reference in the click listener
     // function? How can DOM traversal be used to get the "hour-x" id of the
     // time-block containing the button that was clicked? How might the id be
