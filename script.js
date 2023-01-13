@@ -14,14 +14,27 @@ $(document).ready(function () {
       // grabs the textarea associated with the current container
       let curTextarea = $(curButtonContainer).find('textarea')
       // gets the value from that container
-      let valueOfTextarea = $(curTextarea).val()
-      console.log(valueOfTextarea);
+      valueOfTextarea = $(curTextarea).val()
+      
+
+      localStorage.setItem("text", valueOfTextarea)
+      let test = localStorage.getItem('text')
+      curButtonContainer.textContent = test
+     
+
+      
+      
+    // Set the textarea value to the saved text
+
       // stringify the current container id 
       //let stringCurContainer = JSON.stringify(curButtonContainer)
       // saves to local storage
-      //localStorage.setItem("container", valueOfTextarea )
+    
+      let currentDayAndTime = dayjs()
+      $('#currentDay').text(currentDayAndTime)
     })
-
+   
+  
 
     // local storage. HINT: What does `this` reference in the click listener
     // function? How can DOM traversal be used to get the "hour-x" id of the
