@@ -1,4 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 $(document).ready(function () {
   $(function app() {
 
