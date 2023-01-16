@@ -6,15 +6,15 @@ $(document).ready(function () {
     // adds event listener to all save buttons 
     $('.saveBtn').on('click', (event) => {
     // grabs the button clicked 
-      let curButton = $(event.currentTarget);
+      const curButton = $(event.currentTarget);
       // grabs the id of the button clicked 
-      let curButtonId = $(curButton).attr('id')
+      const curButtonId = $(curButton).attr('id')
       // grabs the block container of the current button 
-      let curButtonContainer = `#${curButtonId}-container`
+      const curButtonContainer = `#${curButtonId}-container`
       // grabs the textarea associated with the current container
-      let curTextarea = $(curButtonContainer).find('textarea')
+      const curTextarea = $(curButtonContainer).find('textarea')
       // gets the value from that container
-      let valueOfTextarea = $(curTextarea).val()
+      const valueOfTextarea = $(curTextarea).val()
       // set the text value to be associated with the container it was saved in 
       localStorage.setItem(curButtonId, valueOfTextarea)
     })
@@ -53,7 +53,7 @@ this part:
     // attribute of each time-block be used to do this?
     //
     
-    let currentDayAndTime = dayjs()
+    const currentDayAndTime = dayjs()
     $('#currentDay').text(currentDayAndTime)
   });
 });
