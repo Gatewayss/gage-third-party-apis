@@ -20,6 +20,10 @@ textarea {
   border-radius: 15px;
 }
 
+.time-block:last-of-type {
+  margin-bottom: 4em;
+}
+
 .row {
   border-top: 1px solid white;
 }
