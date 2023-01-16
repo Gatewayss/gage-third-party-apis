@@ -1,9 +1,9 @@
-# Work Day Scheduler 
+# Workday Scheduler 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
 
-This work day planner will help you keep track of your appointments, reminders, and other tasks you are responsible for throughout the day. The benefits of using this work planner include:
+This workday planner will help you keep track of your appointments, reminders, and other tasks you are responsible for throughout the day. The benefits of using this work planner include:
 
 - Increased productivity and efficiency by having a clear overview of upcoming tasks 
 - Improved planner organization by breaking down tasks into smaller pieces and prioritizing them
