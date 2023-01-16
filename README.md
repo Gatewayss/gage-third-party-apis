@@ -14,7 +14,7 @@ This workday planner will help you keep track of your appointments, reminders, a
 Easily add a task by clicking on the corresponding text block for the desired hour. Type in the task in the text box, and click the blue save button to the right to confirm. To delete an event, simply clear the text and click the save button again. 
 
 
-![add and remove tasks in work day scheduler](assets/Work%20Day%20Scheduler.gif)
+![add and remove tasks in work day scheduler](assets/Workday%20Scheduler.gif)
 
 ## Installation 
 
