@@ -14,28 +14,29 @@ $(document).ready(function () {
       // grabs the textarea associated with the current container
       let curTextarea = $(curButtonContainer).find('textarea')
       // gets the value from that container
-      valueOfTextarea = $(curTextarea).val()
-      
-
-      localStorage.setItem("text", valueOfTextarea)
-      let test = localStorage.getItem('text')
-      curButtonContainer.textContent = test
-     
-
-      
-      
-    // Set the textarea value to the saved text
-
-      // stringify the current container id 
-      //let stringCurContainer = JSON.stringify(curButtonContainer)
-      // saves to local storage
-    
-      let currentDayAndTime = dayjs()
-      $('#currentDay').text(currentDayAndTime)
+      let valueOfTextarea = $(curTextarea).val()
+      // set the text value to be associated with the container it was saved in 
+      localStorage.setItem(curButtonId, valueOfTextarea)
     })
-   
-  
 
+      // saves the text content to the associated container  
+      const hour9Text = localStorage.getItem('hour-9')
+      $('#hour-9-text').text(hour9Text)
+      const hour10Text = localStorage.getItem('hour-10')
+      $('#hour-10-text').text(hour10Text)
+      const hour11Text = localStorage.getItem('hour-11')
+      $('#hour-11-text').text(hour11Text)
+      
+      
+    
+   /*
+this part:
+2. loop through the array of time block input elements and inside the loop:
+    a. do localstorage.getItem('hour-9') (for example)
+    b. if that value exists, make the textcontent equal to it
+    c. do nothing if the value doesn't exist
+   */
+  
     // local storage. HINT: What does `this` reference in the click listener
     // function? How can DOM traversal be used to get the "hour-x" id of the
     // time-block containing the button that was clicked? How might the id be
@@ -51,7 +52,7 @@ $(document).ready(function () {
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
     //
-
+    
     let currentDayAndTime = dayjs()
     $('#currentDay').text(currentDayAndTime)
   });
