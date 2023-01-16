@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $(function app() {
     // current time and day in the header 
-    const currentDayAndTime = dayjs()
+    const currentDayAndTime = Date()
     $('#currentDay').text(currentDayAndTime)
 
     // adds event listener to all save buttons 
@@ -40,7 +40,24 @@ $(document).ready(function () {
     const hour5Text = localStorage.getItem('hour-5')
     $('#hour-5-text').text(hour5Text)
 
+    // grab all the time blocks 
+    let allBlocks = document.querySelectorAll('.time-block');
+    // current time rounded down to hours 
     let currentHour = new Date().getHours();
-    console.log(currentHour);
+   
+    // loop through each time block to get their hour value in military time 
+    for (let i = 0; i < allBlocks.length; i++) {
+      let stringTimeBlock = allBlocks[i].getAttribute('data-hour')
+    // converts that value to a number 
+      let curTimeBlock = (+stringTimeBlock)
+
+      if (currentHour === curTimeBlock) {
+        $(allBlocks[i]).addClass('present')
+      } else if (currentHour < curTimeBlock) {
+        $(allBlocks[i]).addClass('future')
+      } else {
+        $(allBlocks[i]).addClass('past')
+      }
+    }
   });
 });
