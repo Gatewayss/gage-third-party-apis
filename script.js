@@ -1,7 +1,8 @@
 $(document).ready(function () {
   $(function app() {
     // current time and day in the header 
-    const currentDayAndTime = Date()
+    const date = dayjs();
+    const currentDayAndTime = date.format('ddd, MMM D YYYY');
     $('#currentDay').text(currentDayAndTime)
 
     // adds event listener to all save buttons 
